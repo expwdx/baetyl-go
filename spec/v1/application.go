@@ -73,7 +73,7 @@ type Capabilities struct {
 
 type SecurityContext struct {
 	Privileged bool `json:"privileged,omitempty" yaml:"privileged,omitempty"`
-	Capabilities *Capabilities `json:"capabilities,omitempty" yaml:"capabilities"`
+	Capabilities *Capabilities `json:"capabilities,omitempty" yaml:"capabilities,omitempty"`
 }
 
 // Environment environment config
