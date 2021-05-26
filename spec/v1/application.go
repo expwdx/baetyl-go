@@ -66,8 +66,14 @@ type Service struct {
 	Type string `json:"type,omitempty" yaml:"type,omitempty" default:"deployment"`
 }
 
+type Capabilities struct {
+	Add []string `json:"add,omitempty" yaml:"add,omitempty"`
+	Drop []string `json:"drop,omitempty" yaml:"drop,omitempty"`
+}
+
 type SecurityContext struct {
 	Privileged bool `json:"privileged,omitempty" yaml:"privileged,omitempty"`
+	Capabilities *Capabilities `json:"capabilities,omitempty" yaml:"capabilities"`
 }
 
 // Environment environment config
